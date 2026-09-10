@@ -5,56 +5,64 @@ body {
     color: #222;
 }
 
-header {
+.header {
     text-align: center;
     padding: 50px;
     background-color: #1b5e20;
     color: white;
 }
 
-header h1 {
+.header h1 {
     font-size: 50px;
     margin: 0;
 }
 
-nav {
+.header p {
+    font-size: 20px;
+}
+
+.menu {
     background-color: #333;
     text-align: center;
     padding: 15px;
 }
 
-nav a {
+.menu a {
     color: white;
     text-decoration: none;
     margin: 20px;
     font-size: 18px;
 }
 
-nav a:hover {
+.menu a:hover {
     text-decoration: underline;
 }
 
-main {
+.main {
     width: 80%;
     margin: 30px auto;
 }
 
-section {
+.section {
     background-color: white;
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 10px;
 }
 
-h2 {
+.section h2 {
     color: #1b5e20;
 }
 
-li {
+.player-list li {
     margin: 10px;
 }
 
-footer {
+.rules-list li {
+    margin: 10px;
+}
+
+.footer {
     text-align: center;
     padding: 20px;
     background-color: #333;
