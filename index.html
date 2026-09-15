@@ -1,26 +1,38 @@
-```html
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do-lista</title>
+
+    <title>Gissa talet</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Min To-do-lista</h1>
+    <div class="game">
 
-    <input type="text" id="uppgift" placeholder="Skriv en uppgift">
+        <h1>🎯 Gissa talet</h1>
 
-    <button id="laggTill">Lägg till</button>
+        <p>Jag tänker på ett tal mellan 1 och 100.</p>
+        <p>Kan du gissa vilket?</p>
 
-    <ul id="lista"></ul>
+        <input type="number" id="guessInput" placeholder="Skriv din gissning">
 
-    <script src="Logic.js"></script>
+        <button id="guessButton">Gissa</button>
+
+        <p id="message">Skriv ett tal och tryck på Gissa!</p>
+
+        <p>Antal försök: <span id="attempts">0</span></p>
+
+        <button id="restartButton">Starta om</button>
+
+    </div>
+
+    <script src="logic.js"></script>
 
 </body>
+
 </html>
-```

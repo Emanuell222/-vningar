@@ -1,26 +1,50 @@
-```html
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do-lista</title>
+let secretNumber = Math.floor(Math.random() * 100) + 1;
 
-    <link rel="stylesheet" href="style.css">
-</head>
+let attempts = 0;
 
-<body>
+const guessInput = document.getElementById("guessInput");
+const guessButton = document.getElementById("guessButton");
+const message = document.getElementById("message");
+const attemptsText = document.getElementById("attempts");
+const restartButton = document.getElementById("restartButton");
 
-    <h1>Min To-do-lista</h1>
 
-    <input type="text" id="uppgift" placeholder="Skriv en uppgift">
+guessButton.addEventListener("click", function() {
 
-    <button id="laggTill">Lägg till</button>
+    let guess = Number(guessInput.value);
 
-    <ul id="lista"></ul>
+    if (guess < 1 || guess > 100) {
+        message.textContent = "Skriv ett tal mellan 1 och 100.";
+        return;
+    }
 
-    <script src="Logic.js"></script>
+    attempts++;
 
-</body>
-</html>
-```
+    attemptsText.textContent = attempts;
+
+    if (guess < secretNumber) {
+        message.textContent = "⬆️ För lågt! Försök igen.";
+    } 
+    else if (guess > secretNumber) {
+        message.textContent = "⬇️ För högt! Försök igen.";
+    } 
+    else {
+        message.textContent = "🎉 Rätt! Du klarade det på " + attempts + " försök!";
+    }
+
+});
+
+
+restartButton.addEventListener("click", function() {
+
+    secretNumber = Math.floor(Math.random() * 100) + 1;
+
+    attempts = 0;
+
+    attemptsText.textContent = attempts;
+
+    message.textContent = "Nytt tal valt! Börja gissa.";
+
+    guessInput.value = "";
+
+});
