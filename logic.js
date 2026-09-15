@@ -1,21 +1,26 @@
-```javascript
-const input = document.querySelector("#uppgift");
-const knapp = document.querySelector("#laggTill");
-const lista = document.querySelector("#lista");
+```html
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do-lista</title>
 
-knapp.addEventListener("click", function() {
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    if (input.value !== "") {
+<body>
 
-        const nyUppgift = document.createElement("li");
+    <h1>Min To-do-lista</h1>
 
-        nyUppgift.innerHTML = input.value;
+    <input type="text" id="uppgift" placeholder="Skriv en uppgift">
 
-        lista.appendChild(nyUppgift);
+    <button id="laggTill">Lägg till</button>
 
-        input.value = "";
-    }
+    <ul id="lista"></ul>
 
-});
+    <script src="Logic.js"></script>
+
+</body>
+</html>
 ```
-
